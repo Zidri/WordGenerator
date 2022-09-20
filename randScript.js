@@ -5,11 +5,11 @@ const filename = "popwords.txt";
 // Include fs module
 const fs = require('fs');
 // Calling the fs.readFileSync() method
-const data = fs.readFileSync('./popwords.txt',
+const text = fs.readFileSync('./popwords.txt',
               {encoding:'utf8', flag:'r'});
  
-// Display data
-console.log(data);
+// Display text
+console.log(text);
 
 function randGen() {
 
