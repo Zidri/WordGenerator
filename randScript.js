@@ -3,7 +3,7 @@ var $list = '';
 const filename = "popwords.txt";
 
 // Include fs module
-const fs = require('fs');
+const fs = import('fs');
 // Calling the fs.readFileSync() method
 const text = fs.readFileSync('./popwords.txt',
               {encoding:'utf8', flag:'r'});
