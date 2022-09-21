@@ -3,47 +3,18 @@
 var $list = '';
 
 
+// const words = "awkwardness\nawoke\nawol\nawry\nax\naxe\naxel\naxis";
 
-// $.getJSON('unigram_freq.json', function (data) {
+// const wordsArray = [];
 
-
-//     var $output = [];
-//     for (var i in data.wordArray) {
-
-//         $output += data.wordArray[i].word;
-
-//     }
-
-//     // document.getElementById("word").innerHTML = $output;
-// });
-
-// Display text
-// console.log(text);
-
-var file = "file://unigram_freq.json";
-
-function readTextFile(file)
-{
-    var rawFile = new XMLHttpRequest();
-    rawFile.open("GET", file, false);
-    rawFile.onreadystatechange = function ()
-    {
-        if(rawFile.readyState === 4)
-        {
-            if(rawFile.status === 200 || rawFile.status == 0)
-            {
-                var allText = rawFile.responseText;
-                alert(allText);
-            }
-        }
-    }
-    rawFile.send(null);
-}
+var fs = require('fs');
+var text = fs.readFileSync("./mytext.txt", 'utf-8');
+var textByLine = text.split('\n')
 
 
 function randGen() {
 
-    var $max = length(text);
+    var $max = length(wordsArray);
 
     if ($max != null) {
 
