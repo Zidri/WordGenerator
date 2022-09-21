@@ -9,9 +9,10 @@ var $list = '';
 
 var fs = require('fs');
 var text = fs.readFileSync("./mytext.txt", 'utf-8');
+console.log(text);
 var textByLine = text.split('\n')
 
-console.log(textByLine);
+
 
 function randGen() {
 
