@@ -17,7 +17,7 @@ function randGen() {
     }
     else {
         console.log(words);
-        var wordsArray = words.split(',');
+        var wordsArray = words.split(' ');
 
         //get array max
         var $max = wordsArray.length;
