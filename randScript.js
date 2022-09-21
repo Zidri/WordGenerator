@@ -4,24 +4,42 @@ var $list = '';
 
 
 
-$.getJSON('unigram_freq.json', function(data) {
-        
-            
-    var $output = "";
-    for (var i in data.wordArray) {
-      
-        $output += 
-                data.wordArray[i].word + ' '
-               ;
+// $.getJSON('unigram_freq.json', function (data) {
 
-    }
 
-    print_r($output)
-    // document.getElementById("word").innerHTML = $output;
- });
- 
+//     var $output = [];
+//     for (var i in data.wordArray) {
+
+//         $output += data.wordArray[i].word;
+
+//     }
+
+//     // document.getElementById("word").innerHTML = $output;
+// });
+
 // Display text
 // console.log(text);
+
+var file = "file://unigram_freq.json";
+
+function readTextFile(file)
+{
+    var rawFile = new XMLHttpRequest();
+    rawFile.open("GET", file, false);
+    rawFile.onreadystatechange = function ()
+    {
+        if(rawFile.readyState === 4)
+        {
+            if(rawFile.status === 200 || rawFile.status == 0)
+            {
+                var allText = rawFile.responseText;
+                alert(allText);
+            }
+        }
+    }
+    rawFile.send(null);
+}
+
 
 function randGen() {
 
