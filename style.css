@@ -50,6 +50,7 @@ h2{
     font-family: 'Kanit', sans-serif;
     font-weight: 600;
     color: #6D6875;
+    text-transform: capitalize;
 }
 
 .genBtn {
@@ -68,8 +69,10 @@ h2{
 .list {
     color: #6D6875;
     font-size: 1.5rem;
-    font-family: 'Abril Fatface', cursive;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 500;
     line-height: 150%;
     margin: 15px;
     word-spacing: 1rem;
+    text-transform: capitalize;
 }
